@@ -1,0 +1,135 @@
+obsidian_folder_path_str: vault
+obsidian_entrypoint_path_str: vault/index.md
+html_output_folder_path_str: output/
+md_entrypoint_path_str: output/md/index.md
+md_folder_path_str: output/md
+log_output_folder_path_str: output/log
+exclude_subfolders:
+  - .obsidian
+  - .trash
+  - .DS_Store
+  - .git
+  - bin
+copy_vault_to_tempdir: true
+included_file_suffixes:
+  - jpg
+  - jpeg
+  - gif
+  - png
+  - bmp
+  - pdf
+  - mp4
+  - webm
+  - wav
+  - mp3
+video_format_suffixes:
+  - mp4
+  - webm
+audio_format_suffixes:
+  - wav
+  - mp3
+site_name: Wiki
+html_url_prefix: 'vault_publish'
+html_custom_inclusions: []
+navbar_links: []
+toggles:
+  compile_md: true
+  compile_html: true
+  process_all: true
+  verbose_printout: false
+  extended_logging: false
+  allow_duplicate_filenames_in_root: false
+  warn_on_skipped_image: true
+  no_clean: false
+  relative_path_md: true
+  relative_path_html: false
+  external_blank: true
+  features:
+    backlinks:
+      enabled: true
+    styling:
+      layout: documentation
+      max_note_width: 52rem
+      add_toc: true
+      toc_pane: true
+      flip_panes: true
+      accent_color: '#414cfd'
+      accent_color: '65, 76, 253'
+    graph:
+      enabled: true
+      coalesce_force: '-100'
+    create_index_from_tags:
+      enabled: false
+      add_links_in_graph_tree: true
+      tags: []
+      sort:
+        method: none
+        key_path: ''
+        value_prefix: ''
+        reverse: false
+        none_on_bottom: true
+    rss:
+      enabled: false
+      host_root: 'https://localhost:8000/'
+      styling:
+        show_icon: true
+      channel:
+        title: Notes
+        website_link: '<https://your website.com>'
+        description: <your description>
+        language_code: en-us
+        managing_editor: n/a
+        web_master: n/a
+      items:
+        selector:
+          match_keys: []
+          exclude_keys: []
+          include_subfolders: []
+          exclude_subfolders:
+            - .git
+            - obs.html
+          exclude_files:
+            - not_created.html
+            - index.html
+        description:
+          selectors:
+            - - yaml
+              - 'rss:description'
+            - - first-paragraphs
+              - 2
+              - <br/><br/>
+            - - first-header
+              - 1
+        title:
+          selectors:
+            - - yaml
+              - 'rss:title'
+            - - first-header
+              - 1
+            - - path
+              - - parent
+                - 1
+              - '/ '
+              - - stem
+        publish_date:
+          selectors:
+            - - yaml
+              - 'rss:publish_date'
+            - - yaml_strip
+              - tags
+              - - date/
+          iso_formatted: true
+          format_string: ''
+    create_index_from_dir_structure:
+      enabled: true
+      rel_output_path: obs.html/dir_index.html
+      styling:
+        show_icon: true
+      exclude_subfolders:
+        - .git
+        - __src
+        - md
+        - obs.html
+      exclude_files:
+        - favicon.ico
+        - not_created.html
