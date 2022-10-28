@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+        <head>
+                <!-- Page information -->
+                <meta charset="UTF-8" />
+                <meta name="node_id" content="null">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <link rel="shortcut icon" href="/favicon.ico" />
+
+                <!-- Set title -->
+                <title>Wiki</title>
+
+                <!-- Includes -->
+                
+<script src="vault_publish/obs.html/static/obsidian_core.js"></script>
+<script src="vault_publish/obs.html/static/encoding.js"></script>
+<link rel="stylesheet" href="vault_publish/obs.html/static/master.css" />
+<script src="vault_publish/obs.html/static/mermaid.9.0.1.min.js"></script>
+<script>
+  MathJax = {
+    loader: {
+      load: [
+        '[tex]/action',
+        'output/chtml',
+        '[tex]/centernot'
+      ]
+    },
+    tex: {
+      inlineMath: [ ["\\(","\\)"] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true,
+      processEnvironments: true,
+      packages: {'[+]': ['centernot']}
+    }
+  };
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<script src="vault_publish/obs.html/static/flexsearch.bundle.js"></script>
+<script src="vault_publish/obs.html/static/pako.js"></script>
+<script src="vault_publish/obs.html/static/search.js"></script>
+<script src="vault_publish/obs.html/static/dirtree.js"></script>
+
+
+                <!-- Onload tweaks -->
+                <script>
+                        const CURRENT_NODE = 'null';
+                        const HTML_URL_PREFIX = 'vault_publish';
+                        const PAGE_DEPTH = 2;
+                        const CONFIGURED_HTML_URL_PREFIX = 'vault_publish';
+                </script>
+        </head>
+
+<body class="theme-obs-light">
+    <div id="antiflash" style="display: none;"></div>
+    <script>
+            document.getElementById('antiflash').style.display = 'block';
+    </script>
+    <div id="search-master-div">
+    <div id="search-slab" king_ramses="return the slaaab">
+            <div id="search-controls">
+                    <input id="search_string" placeholder="Type to search notes" type="text" />
+                    <div class="tooltip" style="display: none;">
+                        <input type="checkbox" id="hard_search" name="hard" />
+                        <span class="tooltiptext">Hard search (require exact match)</span>
+                    </div>
+                    <div id="search-results-box">
+                        <div id="search-results"></div>
+                    </div>
+                    <div id="search-instructions">
+                        <div class="prompt-instruction">
+                                <b>esc</b> to dismiss
+                        </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById("search-master-div").addEventListener('click', e => {
+            if(e.target !== e.currentTarget){
+                    return
+            }
+            toggle_id('search-master-div');
+    })
+    document.getElementById("search_string").addEventListener("input", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    }); 
+    document.getElementById("hard_search").addEventListener("click", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    });
+
+    window.addEventListener('keydown', e => {
+        if((e.key=='Escape'||e.key=='Esc'||e.keyCode==27)){
+            toggle_id('search-master-div');
+            return false;
+        } 
+    }, true);
+
+    function click_list_link(element){
+        element.parentElement.getElementsByTagName('a')[0].click()
+    }
+</script>
+
+    <div id="page_holder" class="flex_col">
+            <div id="header" class="header">
+                    <div id="header_flex" class="flex_row">
+                            <a href="vault_publish/index.html" id="homelink" title="Clear screen and go to homepage">Wiki</a>
+                            <div class="navbar-button" onclick="toggle_menu()">
+                                    ≡
+                            </div>
+                            <div id="navbar" class="navbar">
+                                
+                                <div class="icon-tray">
+                                    <div id="theme-button" class="theme-button requires_js" title="Change theme" onclick="toggle_theme_popup(this)">
+    T
+</div>
+<script>
+    function toggle_theme_popup(el){
+        // make theme button show that it's active by adding the .active class
+        toggle(el);
+
+        // show the theme selector
+        toggle_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            toggle(pu);
+        }
+    }
+
+    function disable_theme_popup(){
+        disable_id('theme-button');
+
+        // show the theme selector
+        disable_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            disable(pu);
+        }
+    }
+</script>
+                                            <div onclick="openSearch()" class="theme-button requires_js">
+                <img src = "vault_publish/obs.html/static/search.svg" alt="Search notes" title="Search notes" style="margin: 4px;"/>
+        </div>
+        <script>
+                function openSearch(){
+                        // toggle search popup and continue with extra code if it is enabled this time
+                        if (toggle_id('search-master-div')){
+                                // clear input and put focus on it so that we can start typing immediately
+                                let ss = document.getElementById('search_string');
+                                ss.value = '';
+                                ss.focus()
+                                ss.select()
+                        }
+                }
+        </script>
+                                            <div class="graph_header_div requires_js">
+            <a id="graph_link" class="system-link" href="vault_publish/obs.html/graph/index.html?node=null" title="Open fullpage Graph">
+                    <img class="graph_header_div_svg" src = "vault_publish/obs.html/static/graph.svg" alt="Open fullpage Graph" style="margin: 2px; width: 17px;"/>
+            </a>
+        </div>
+                                            <div >
+            <a id="dirtree_link" class="system-link" href="vault_publish/obs.html/dir_index.html" title="View directory tree">
+                    <img src = "vault_publish/obs.html/static/dirtree.svg" style="width: 12px; padding: 4px;" alt="Directory tree link"/>
+            </a>
+        </div>
+                                    <div>
+    <a href="vault_publish/obs.html/tags/index.html" title="Open tag view">
+            <img src = "vault_publish/obs.html/static/hashtag.svg" alt="RSS Feed link" style="width: 24px; margin-left: -2px; margin-top: -2px;"/>
+    </a>
+</div>
+                                    
+                                </div>
+                            </div>
+                    </div>
+                    <div class="popup" id="theme-popup">
+    <label for="cars">Theme </label>
+
+    <select name="theme" id="theme" onchange="set_theme(this.value)">
+      <option value="light">light</option>
+      <option value="obs-light" selected="selected">obsidian-light</option>
+      <option value="obs-dark">obsidian-dark</option>
+    </select> 
+</div>
+            </div>
+            
+            <div class="graph_full_page">
+                <div class="graph-button-row" style="display:flex;">
+                    <button class="graph_button graph_show_button" id="Bgraph_full_page" level="" note_temp_id="graph_full_page" style="visibility: hidden; margin:0px">
+                        Show Graph
+                    </button>
+                    <button class="graph_button graph_type_button" id="Cgraph_full_page" style="flex:1; margin:0px; margin-right:0.2rem;" onclick="window.ObsHtmlGraph.switch_graph_type(this);">
+                        2D
+                    </button>
+                </div>
+                    <div id="Agraph_full_page" class="graph_div_full"></div>
+
+            </div>
+                        
+            
+
+    </div>
+    
+    <script type="module">
+        document.addEventListener('DOMContentLoaded', load_fullpage_graph);
+
+        function load_fullpage_graph(){
+
+            // set graph_type button correctly
+            let type_d = window.localStorage.getItem('graph_type_d');
+            if (!type_d){
+                window.localStorage.setItem('graph_type_d', '2D');
+                type_d = '2D';
+            }
+            document.getElementById('Cgraph_full_page').innerHTML = type_d;
+            
+            import('vault_publish/obs.html/static/graph.js').then((Module) => {
+                window.ObsHtmlGraph = Module;
+                window.ObsHtmlGraph.arm_page(document.getElementById('page_holder'))
+
+                // overwrites
+                window.ObsHtmlGraph.default_actions['open_link'] = function (args){
+                    console.log('hi openlink')
+                    return window.ObsHtmlGraph.graph_open_link_normal(args)()
+                }
+                window.ObsHtmlGraph.default_actions['left_click'] = function (args){
+                    console.log('hi leftclick')
+                    let g = window.ObsHtmlGraph.graphs[args.uid];
+                    return g.actions['select_node'](args);
+                }
+                window.ObsHtmlGraph.default_actions['right_click'] = function (args){
+                    console.log('hi rightclick')
+                    let g = window.ObsHtmlGraph.graphs[args.uid];
+                    return g.actions['open_link'](args);
+                }
+
+                // Get node id from the page where we clicked on the icon for the fullpage graph
+                const urlParams = new URLSearchParams(window.location.search);
+                const pinnedNode = urlParams.get('node');
+
+                // Immediately run graph instead of waiting for button click
+                window.ObsHtmlGraph.run(document.getElementById('Bgraph_full_page'), 'graph_full_page', pinnedNode);
+            })
+        }
+    </script>
+
+<script src="vault_publish/obs.html/static/load_dirtree_footer.js" type="text/javascript"></script>
+
+
+
+
+
+</body>
+</html>
