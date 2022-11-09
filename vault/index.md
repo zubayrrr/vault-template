@@ -8,18 +8,14 @@ tags:
 
 ## Hotkeys/Workflows
 
-| Hotkey          | What it does                                                              |
-|:--------------- |:------------------------------------------------------------------------- |
-| `Alt + A`       | A new project note                                                        |
-| `Alt + S`       | A new area note                                                           |
-| `Alt + D`       | A new resource note                                                       |
-| `Alt + W`       | A new archive note                                                        |
-| `Alt + N`       | Create a new note from a template(will be moved to its designated folder) |
-| `Ctrl + N`      | Create a new untitled note in the root of the vault                       |
-| `Ctrl + Enter`  | Generate metadata for a newly created note using `Ctrl + N`               |
-| `Shift + Enter` | Open link under cursor in a new tab                                       |
-| `Alt + M`       | Move the current note to a folder                                         |
-|                 | Show Outline(Table of Contents based on headings)                                                                          |
+| Hotkey          | What it does                                                |
+|:--------------- |:----------------------------------------------------------- |
+| `Ctrl + N`      | Create a new untitled note in the root of the vault         |
+| `Ctrl + Enter`  | Generate metadata for a newly created note using `Ctrl + N` |
+| `Shift + Enter` | Open link under cursor in a new tab                         |
+| `Alt + M`       | Move the current note to a folder                           |
+|                 | Show Outline(Table of Contents based on headings)           |
+| `Alt + Q`       | Toggle Emoji Toolbar        😇                                                    |
 
 ## Some rules to abide by
 
@@ -39,6 +35,8 @@ I installed some quality of life plugins(community).
 - [obsidian42-strange-new-worlds](https://github.com/TfTHacker/obsidian42-strange-new-worlds) -  Discover the connections of thought in your Obsidian vault
 - [QuickAdd for Obsidian](https://github.com/chhoumann/quickadd) - Quickly add new pages or content to your vault
 - [obsidian-ReadItLater](https://github.com/DominikPieper/obsidian-ReadItLater) - is a simple plugin for Obsidian to collect interesting information from your clipboard into your vault       
-- [Obsidian-Table-Generator](https://github.com/quorafind/obsidian-table-generator) - A plugin for generate markdown table quickly like Typora                                                                                                                                                                                      
+- [Obsidian-Table-Generator](https://github.com/quorafind/obsidian-table-generator) - A plugin for generate markdown table quickly like Typora     
+- [PodNotes](https://github.com/chhoumann/PodNotes) -  a plugin for Obsidian that helps the user write notes on podcasts.
+- [obsidian-dataview ](https://github.com/blacksmithgu/obsidian-dataview) - A high-performance data index and query language over Markdown files.
 
 ---
