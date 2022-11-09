@@ -42,5 +42,3 @@ I installed some quality of life plugins(community).
 - [Obsidian-Table-Generator](https://github.com/quorafind/obsidian-table-generator) - A plugin for generate markdown table quickly like Typora                                                                                                                                                                                      
 
 ---
-
-[[a new 12 note]]

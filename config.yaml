@@ -9,7 +9,7 @@ exclude_subfolders:
   - .trash
   - .DS_Store
   - .git
-  - bin
+  - _bin
 copy_vault_to_tempdir: true
 included_file_suffixes:
   - jpg

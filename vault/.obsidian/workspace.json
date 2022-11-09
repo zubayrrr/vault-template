@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "04 Archive/Evergreen Notes.md",
+                "file": "index.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -99,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "04 Archive/Evergreen Notes.md",
+                "file": "index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "04 Archive/Evergreen Notes.md",
+                "file": "index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "04 Archive/Evergreen Notes.md"
+                "file": "index.md"
               }
             }
           },
@@ -177,10 +177,10 @@
   },
   "active": "1004da06164859e3",
   "lastOpenFiles": [
+    "04 Archive/Evergreen Notes.md",
     "04 Archive/Markdown links absolute.md",
     "04 Archive/Markdown links relative.md",
     "04 Archive/Obsidian links.md",
-    "04 Archive/Evergreen Notes.md",
     "04 Archive/04 Archive.md",
     "05 Inbox/05 Inbox.md",
     "00 Journal/00 Journal.md",
