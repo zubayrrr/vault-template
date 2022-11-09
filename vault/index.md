@@ -4,8 +4,9 @@ tags:
   - meta
 ---
 
-## Hotkeys/Workflows
+- [[Evergreen Notes]]
 
+## Hotkeys/Workflows
 
 | Hotkey          | What it does                                                              |
 |:--------------- |:------------------------------------------------------------------------- |
@@ -39,3 +40,7 @@ I installed some quality of life plugins(community).
 - [QuickAdd for Obsidian](https://github.com/chhoumann/quickadd) - Quickly add new pages or content to your vault
 - [obsidian-ReadItLater](https://github.com/DominikPieper/obsidian-ReadItLater) - is a simple plugin for Obsidian to collect interesting information from your clipboard into your vault       
 - [Obsidian-Table-Generator](https://github.com/quorafind/obsidian-table-generator) - A plugin for generate markdown table quickly like Typora                                                                                                                                                                                      
+
+---
+
+[[a new 12 note]]

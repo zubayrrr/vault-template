@@ -2,12 +2,17 @@
   "templater-obsidian",
   "folder-note-plugin",
   "obsidian-read-it-later",
-  "quickadd",
   "table-editor-obsidian",
   "obsidian-table-generator",
   "auto-note-mover",
   "obsidian42-brat",
   "obsidian42-strange-new-worlds",
   "obsidian-auto-link-title",
-  "obsidian-smart-typography"
+  "obsidian-smart-typography",
+  "obsidian-completr",
+  "obsidian-reveal-active-file",
+  "dataview",
+  "obsidian-emoji-toolbar",
+  "podnotes",
+  "calendar"
 ]

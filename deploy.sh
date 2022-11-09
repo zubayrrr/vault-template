@@ -1,7 +1,7 @@
 # Config
-git_output="/home/igloo/example_vault/output"
-obsidian_folder="/home/igloo/example_vault/vault"
-root_folder="/home/igloo/example_vault/"
+git_output="/home/igloo/vault-template/output"
+obsidian_folder="/home/igloo/vault-template/vault"
+root_folder="/home/igloo/vault-template/"
 
 # Move to output folder and make sure it is up to date
 cd $git_output
@@ -35,7 +35,7 @@ fi
 
 # Push changes
 cd $git_output
-#mv html/* ./
+mv html/* ./
 rm -rf html/
 
 git add . --all

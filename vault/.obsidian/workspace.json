@@ -4,37 +4,23 @@
     "type": "split",
     "children": [
       {
-        "id": "59084b8d6edd25af",
+        "id": "3d56a6ebda41868f",
         "type": "tabs",
         "children": [
           {
-            "id": "d628ab88a9f4a743",
+            "id": "c3df26904264f024",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "index.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "13ff341b777adadd",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "This is a backlink.md",
+                "file": "00 Journal/00 Journal.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -100,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "This is a backlink.md",
+                "file": "00 Journal/00 Journal.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "This is a backlink.md",
+                "file": "00 Journal/00 Journal.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -140,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "This is a backlink.md"
+                "file": "00 Journal/00 Journal.md"
               }
             }
           },
@@ -151,26 +137,41 @@
               "type": "Strange New Worlds",
               "state": {}
             }
+          },
+          {
+            "id": "fc3427b65f4befb1",
+            "type": "leaf",
+            "state": {
+              "type": "podcast_player_view",
+              "state": {}
+            }
+          },
+          {
+            "id": "e70da2fec698451d",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 6
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
-  "active": "13ff341b777adadd",
+  "active": "c3df26904264f024",
   "lastOpenFiles": [
-    "this is a backlink.md",
-    "This is a backlink.md",
-    "index.md",
-    "archive/archive.md",
-    "archive/Evergreen Notes.md",
-    "sources/sources.md",
-    "projects/projects.md",
-    "inbox/inbox.md",
-    "areas/areas.md",
-    "sources/a new resource type note.md"
+    "_bin/templates/new daily note template.md",
+    "00 Journal/2022-11-08.md",
+    "_journal/2022-11-08.md",
+    "00 Journal/00 Journal.md",
+    "_bin/templates/new podcast template.md",
+    "_bin/templates/new book template.md",
+    "03 Resources/03 Resources.md",
+    "03 Resources/Articles/Building a Second Brain Summary.md",
+    "_bin/templates/new note template.md",
+    "_bin/templates/new video template.md"
   ]
 }

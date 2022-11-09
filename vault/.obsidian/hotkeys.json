@@ -39,15 +39,15 @@
       "key": "A"
     }
   ],
-  "templater-obsidian:create-new-note-from-template": [],
-  "templater-obsidian:replace-in-file-templater": [
+  "templater-obsidian:create-new-note-from-template": [
     {
       "modifiers": [
         "Mod"
       ],
-      "key": "Enter"
+      "key": "M"
     }
   ],
+  "templater-obsidian:replace-in-file-templater": [],
   "editor:open-link-in-new-leaf": [
     {
       "modifiers": [
@@ -80,5 +80,38 @@
       "key": "N"
     }
   ],
-  "templater-obsidian:insert-templater": []
+  "templater-obsidian:insert-templater": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "T"
+    }
+  ],
+  "templater-obsidian:bin/templates/new note.md": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "Enter"
+    }
+  ],
+  "obsidian-emoji-toolbar:emoji-picker:open-picker": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "Q"
+    }
+  ],
+  "templater-obsidian:_bin/templates/new note template.md": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "Enter"
+    }
+  ],
+  "obsidian-completr:completr-bypass-enter-key": [],
+  "obsidian-completr:completr-bypass-tab-key": []
 }

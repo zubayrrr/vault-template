@@ -4,22 +4,42 @@
   "statusBar_trigger_indicator": true,
   "folder_tag_pattern": [
     {
-      "folder": "archive",
+      "folder": "03 Resources/Articles",
+      "tag": "#articles",
+      "pattern": ""
+    },
+    {
+      "folder": "03 Resources/Books",
+      "tag": "#books",
+      "pattern": ""
+    },
+    {
+      "folder": "03 Resources/Podcasts",
+      "tag": "#podcasts",
+      "pattern": ""
+    },
+    {
+      "folder": "03 Resources/Tweets",
+      "tag": "#tweets",
+      "pattern": ""
+    },
+    {
+      "folder": "04 Archive",
       "tag": "#archive",
       "pattern": ""
     },
     {
-      "folder": "areas",
+      "folder": "02 Areas",
       "tag": "#areas",
       "pattern": ""
     },
     {
-      "folder": "sources",
-      "tag": "#sources",
+      "folder": "03 Resources",
+      "tag": "#resource",
       "pattern": ""
     },
     {
-      "folder": "projects",
+      "folder": "01 Projects",
       "tag": "#projects",
       "pattern": ""
     }
@@ -27,7 +47,7 @@
   "use_regex_to_check_for_excluded_folder": false,
   "excluded_folder": [
     {
-      "folder": "bin/templates"
+      "folder": "_bin/templates"
     }
   ]
 }

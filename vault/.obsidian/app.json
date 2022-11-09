@@ -2,5 +2,6 @@
   "showFrontmatter": true,
   "spellcheck": true,
   "alwaysUpdateLinks": true,
-  "promptDelete": false
+  "promptDelete": false,
+  "attachmentFolderPath": "_bin/images"
 }

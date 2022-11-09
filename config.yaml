@@ -1,6 +1,6 @@
 obsidian_folder_path_str: vault
 obsidian_entrypoint_path_str: vault/index.md
-html_output_folder_path_str: output/
+html_output_folder_path_str: output/html
 md_entrypoint_path_str: output/md/index.md
 md_folder_path_str: output/md
 log_output_folder_path_str: output/log
@@ -29,7 +29,7 @@ audio_format_suffixes:
   - wav
   - mp3
 site_name: Wiki
-html_url_prefix: 'vault_publish'
+html_url_prefix: ''
 html_custom_inclusions: []
 navbar_links: []
 toggles:
@@ -45,8 +45,29 @@ toggles:
   relative_path_html: false
   external_blank: true
   features:
-    backlinks:
-      enabled: true
+    code_highlight:
+      enabled: True
+    mermaid_diagrams:
+      enabled: True
+    callouts:
+      enabled: True
+    math_latex:
+      enabled: True
+    backlinks:                  # Show backlinks at the bottom of each note
+      enabled: True
+    search:
+      enabled: True
+      styling:
+        show_icon: True
+    tags_page:
+      enabled: True
+      styling:
+        show_icon: True
+        show_in_note_footer: True
+    eraser:
+      enabled: True
+    breadcrumbs:
+      enabled: True
     styling:
       layout: documentation
       max_note_width: 52rem
@@ -57,7 +78,6 @@ toggles:
       accent_color: '65, 76, 253'
     graph:
       enabled: true
-      coalesce_force: '-100'
     create_index_from_tags:
       enabled: false
       add_links_in_graph_tree: true
