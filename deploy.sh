@@ -5,7 +5,7 @@ root_folder="/home/igloo/vault-template/"
 
 # Move to output folder and make sure it is up to date
 cd $git_output
-git pull --recurse-submodules
+git pull
 
 # Remove all files except .git/ and README.md
 echo "Will delete previous output:"
@@ -38,6 +38,6 @@ cd $git_output
 mv html/* ./
 rm -rf html/
 
-git add . --all
-git commit -m "autopush"
-git push -f
+# git add . --all
+# git commit -m "autopush"
+# git push -f
