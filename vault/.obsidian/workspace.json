@@ -13,7 +13,20 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "00 Journal/00 Journal.md",
+                "file": "04 Archive/Evergreen Notes.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "db3d482dfbcc964f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "03 Resources/Podcasts/Dr. Layne Norton The Science of Eating for Health Fat Loss Lean Muscle  Episode 97.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -86,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "00 Journal/00 Journal.md",
+                "file": "04 Archive/Evergreen Notes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "00 Journal/00 Journal.md",
+                "file": "04 Archive/Evergreen Notes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "00 Journal/00 Journal.md"
+                "file": "04 Archive/Evergreen Notes.md"
               }
             }
           },
@@ -155,23 +168,24 @@
             }
           }
         ],
-        "currentTab": 6
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
-  "active": "c3df26904264f024",
+  "active": "1004da06164859e3",
   "lastOpenFiles": [
-    "_bin/templates/new daily note template.md",
-    "00 Journal/2022-11-08.md",
-    "_journal/2022-11-08.md",
+    "04 Archive/Markdown links absolute.md",
+    "04 Archive/Markdown links relative.md",
+    "04 Archive/Obsidian links.md",
+    "04 Archive/Evergreen Notes.md",
+    "04 Archive/04 Archive.md",
+    "05 Inbox/05 Inbox.md",
     "00 Journal/00 Journal.md",
-    "_bin/templates/new podcast template.md",
-    "_bin/templates/new book template.md",
-    "03 Resources/03 Resources.md",
-    "03 Resources/Articles/Building a Second Brain Summary.md",
-    "_bin/templates/new note template.md",
+    "00 Journal/2022-11-08.md",
+    "01 Projects/Workout plan for the next 6 months.md",
     "_bin/templates/new video template.md"
   ]
 }

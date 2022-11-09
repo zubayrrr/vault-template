@@ -1,8 +1,27 @@
 {
-  "savedFeeds": {},
+  "savedFeeds": {
+    "Huberman Lab": {
+      "title": "Huberman Lab",
+      "url": "https://feeds.megaphone.fm/hubermanlab",
+      "artworkUrl": "https://megaphone.imgix.net/podcasts/042e6144-725e-11ec-a75d-c38f702aecad/image/Huberman-Lab-Podcast-Thumbnail-3000x3000.png?ixlib=rails-2.1.2&max-w=3000&max-h=3000&fit=crop&auto=format,compress"
+    },
+    "Lex Fridman Podcast": {
+      "title": "Lex Fridman Podcast",
+      "url": "https://lexfridman.com/feed/podcast/",
+      "artworkUrl": "https://lexfridman.com/wordpress/wp-content/uploads/2017/06/cropped-lex-favicon-4-1-32x32.png"
+    }
+  },
   "podNotes": {},
   "defaultPlaybackRate": 1,
-  "playedEpisodes": {},
+  "playedEpisodes": {
+    "Dr. Layne Norton: The Science of Eating for Health, Fat Loss & Lean Muscle | Episode 97": {
+      "title": "Dr. Layne Norton: The Science of Eating for Health, Fat Loss & Lean Muscle | Episode 97",
+      "podcastName": "Huberman Lab",
+      "time": 6.951183,
+      "duration": 13774.341188,
+      "finished": false
+    }
+  },
   "favorites": {
     "icon": "lucide-star",
     "name": "Favorites",
@@ -20,12 +39,22 @@
   "playlists": {},
   "skipBackwardLength": 15,
   "skipForwardLength": 15,
+  "currentEpisode": {
+    "title": "Dr. Layne Norton: The Science of Eating for Health, Fat Loss & Lean Muscle | Episode 97",
+    "streamUrl": "https://traffic.megaphone.fm/SCIM1870631763.mp3?updated=1667831649",
+    "url": "https://hubermanlab.com/dr-layne-norton-the-science-of-eating-for-health-fat-loss-and-lean-muscle/",
+    "description": "My guest is Layne Norton, Ph.D. — one of the world’s foremost experts in nutrition, protein metabolism, muscle gain and fat loss. We discuss the science of energy utilization and balance, the efficacy of different diets (e.g., ketogenic, vegan, vegetarian, carnivore, omnivore), and how best to build lean muscle mass and lose fat. We also discuss optimal protein and fiber intake, the best sources of protein, the correlation between appetite, satiety signals and exercise, along with male and female-specific needs. Dr. Norton also explains how to support a healthy gut microbiome and offers insight into sugar and artificial sweeteners, processed, cooked, and raw foods, supplements, seed oils, and the relationship of LDL/HDL levels to cardiovascular health. This episode serves as a master class in nutrition, metabolism and exercise and is sure to benefit people of all ages and with different health and fitness goals.\nThank you to our sponsors\nAG1 (Athletic Greens): https://athleticgreens.com/huberman\nLMNT: https://www.drinklmnt.com/huberman\nROKA: https://www.roka.com/huberman\nInsideTracker: https://www.insidetracker.com/huberman\nSupplements from Momentous\nhttps://www.livemomentous.com/huberman\nHuberman Lab Premium\nhttps://hubermanlab.com/premium\nFor the full show notes, visit hubermanlab.com\nTimestamps\n(00:00:00) Dr. Layne Norton, Nutrition & Fitness\n(00:02:53) LMNT, ROKA, InsideTracker, Momentous\n(00:06:50) Calories & Cellular Energy Production\n(00:12:35) Energy Balance, Food Labels, Fiber\n(00:15:19) Resting Metabolic Rate, Thermic Effect of Food\n(00:19:04) Exercise & Non-Exercise Activity Thermogenesis (NEAT)\n(00:25:49) Losing Weight, Tracking Calories, Daily Weighing\n(00:29:24) Post-Exercise Metabolic Rate, Appetite\n(00:35:04) AG1 (Athletic Greens)\n(00:36:19) Exercise & Appetite, Calorie Trackers, Placebo Effects & Beliefs\n(00:43:46) Exercise & Satiety Signals, Maintain Weight Loss & Identity\n(00:56:32) Weight Loss & Maintenance, Diet Adherence\n(01:03:33) Restrictive Diets & Transition Periods\n(01:08:03) Gut Health & Appetite\n(01:16:23) Tool: Supporting Gut Health, Fiber & Longevity\n(01:23:59) LDL, HDL & Cardiovascular Disease\n(01:30:31) Leucine, mTOR & Protein Synthesis\n(01:37:31) Tool: Daily Protein Intake & Muscle Mass\n(01:44:24) Protein & Fasting, Lean Body Mass\n(01:55:38) Plant-Based Proteins: Whey, Soy, Leucine, Corn, Pea\n(02:04:28) Processed Foods\n(02:11:54) Obesity Epidemic, Calorie Intake & Energy Output\n(02:17:33) Obesity, Sugar & Fiber, Restriction & Craving\n(02:25:57) Artificial Sweeteners & Blood Sugar\n(02:38:55) Artificial Sweeteners & Gut Microbiome, Sucralose, Blood Sugar\n(02:50:19) Rapid Weight Loss, Satiety & Beliefs\n(02:58:13) Seed Oils & Obesity, Saturated Fat, Overall Energy Toxicity\n(03:08:15) Females, Diet, Exercise & Menstrual Cycles\n(03:14:05) Raw vs. Cooked Foods\n(03:16:32) Berberine & Glucose Scavenging\n(03:19:12) Fiber & Gastric Emptying Time\n(03:21:00) Supplements, Creatine Monohydrate, Rhodiola Rosea\n(03:30:33) Hard Training; Challenge & Mental Resilience\n(03:36:12) Carbon App\n(03:47:11) Zero-Cost Support, YouTube Feedback, Spotify & Apple Reviews, Sponsors, Momentous, Neural Network Newsletter, Social Media\nDisclaimer: https://hubermanlab.com/disclaimer\nTitle Card Photo Credit: Mike Blabac - https://www.blabacphoto.com",
+    "podcastName": "Huberman Lab",
+    "artworkUrl": "https://megaphone.imgix.net/podcasts/042e6144-725e-11ec-a75d-c38f702aecad/image/Huberman-Lab-Podcast-Thumbnail-3000x3000.png?ixlib=rails-2.1.2&max-w=3000&max-h=3000&fit=crop&auto=format,compress",
+    "episodeDate": "2022-11-07T09:00:00.000Z",
+    "feedUrl": "https://feeds.megaphone.fm/hubermanlab"
+  },
   "timestamp": {
     "template": "{{time}} "
   },
   "note": {
-    "path": "02 Resources/Podcasts/{{title}}",
-    "template": "Podcast:: [[{{podcast}}]], #podcasts\nEpisode:: {{title}}\nLink:: {{url}}\nDescription:: {{description}}\nTopics:: \n---\n\n"
+    "path": "03 Resources/Podcasts/{{title}}",
+    "template": "Podcast:: [[{{podcast}}]], #podcasts\nEpisode:: {{title}}\nLink:: {{url}}\nDescription:: {{description}}\nTopics:: \n\n---\n\n"
   },
   "download": {
     "path": "_bin/podcasts/{{title}}"

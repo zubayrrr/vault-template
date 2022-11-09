@@ -3,8 +3,6 @@ title: 'Evergreen Notes'
 category: '2022'
 tags:
   - archive
-aliases:
-  - 'Evergreen Notes'
 created: 2022-10-25T23:15:54.692Z
 updated: 2022-10-25T23:15:54.692Z
 ---

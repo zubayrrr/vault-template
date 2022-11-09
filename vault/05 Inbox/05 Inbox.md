@@ -3,8 +3,6 @@ title: 'inbox'
 category: '2022'
 tags:
   - meta
-aliases:
-  - 'inbox'
 created: 2022-10-26T00:21:19.436Z
 updated: 2022-10-26T00:21:19.436Z
 ---
