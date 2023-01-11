@@ -69,7 +69,7 @@ toggles:
     breadcrumbs:
       enabled: True
     styling:
-      layout: documentation
+      layout: mini
       max_note_width: 52rem
       add_toc: true
       toc_pane: true

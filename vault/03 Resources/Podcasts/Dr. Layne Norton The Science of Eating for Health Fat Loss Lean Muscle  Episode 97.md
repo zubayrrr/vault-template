@@ -1,3 +1,12 @@
+---
+title: 'Dr. Layne Norton The Science of Eating for Health Fat Loss Lean Muscle  Episode 97'
+category: '2022'
+tags:
+  - resources
+created: 2022-11-09T14:28:11.045Z
+updated: 2022-11-09T14:32:00.957Z
+---
+
 Podcast:: [[Huberman Lab]], #podcasts
 Episode:: Dr. Layne Norton: The Science of Eating for Health, Fat Loss & Lean Muscle | Episode 97
 Link:: https://hubermanlab.com/dr-layne-norton-the-science-of-eating-for-health-fat-loss-and-lean-muscle/

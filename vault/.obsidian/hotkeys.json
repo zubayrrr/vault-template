@@ -113,5 +113,6 @@
     }
   ],
   "obsidian-completr:completr-bypass-enter-key": [],
-  "obsidian-completr:completr-bypass-tab-key": []
+  "obsidian-completr:completr-bypass-tab-key": [],
+  "obsidian-completr:completr-blacklist-current-word": []
 }
