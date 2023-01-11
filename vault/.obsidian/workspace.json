@@ -26,7 +26,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "03 Resources/Podcasts/Dr. Layne Norton The Science of Eating for Health Fat Loss Lean Muscle  Episode 97.md",
+                "file": "04 Archive/04 Archive.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -39,7 +39,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "index.md",
+                "file": "04 Archive/Evergreen Notes.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -47,7 +47,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -113,7 +113,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "index.md",
+                "file": "04 Archive/04 Archive.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -130,7 +130,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "index.md",
+                "file": "04 Archive/04 Archive.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -153,7 +153,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "index.md"
+                "file": "04 Archive/04 Archive.md"
               }
             }
           },
@@ -192,24 +192,24 @@
   "left-ribbon": {
     "hiddenItems": {
       "templater-obsidian:Templater": false,
-      "obsidian-read-it-later:ReadItLater: Save clipboard": false,
-      "table-editor-obsidian:Advanced Tables Toolbar": false,
       "obsidian42-brat:BRAT": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
-      "command-palette:Open command palette": false
+      "command-palette:Open command palette": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "obsidian-read-it-later:ReadItLater: Save clipboard": false
     }
   },
-  "active": "1004da06164859e3",
+  "active": "db3d482dfbcc964f",
   "lastOpenFiles": [
+    "03 Resources/Podcasts/Dr. Layne Norton The Science of Eating for Health Fat Loss Lean Muscle  Episode 97.md",
+    "04 Archive/Evergreen Notes.md",
+    "index.md",
     "_bin/templates/new generic note template.md",
     "_bin/templates/test.md",
     "_bin/templates/new note template.md",
-    "03 Resources/Podcasts/Dr. Layne Norton The Science of Eating for Health Fat Loss Lean Muscle  Episode 97.md",
-    "index.md",
-    "04 Archive/Evergreen Notes.md",
     "04 Archive/Markdown links absolute.md",
     "04 Archive/Markdown links relative.md",
     "04 Archive/Obsidian links.md",

@@ -579,14 +579,14 @@ var FeedParser = class {
     const descriptionEl = item.querySelector("description");
     const pubDateEl = item.querySelector("pubDate");
     const itunesImageEl = item.querySelector("image");
-    if (!titleEl || !streamUrlEl || !descriptionEl || !pubDateEl) {
+    if (!titleEl || !streamUrlEl || !pubDateEl) {
       console.log(titleEl, streamUrlEl, linkEl, descriptionEl, pubDateEl);
       throw new Error("Invalid RSS feed");
     }
     const title = titleEl.textContent || "";
     const streamUrl = streamUrlEl.getAttribute("url") || "";
     const url = (linkEl == null ? void 0 : linkEl.textContent) || "";
-    const description = descriptionEl.textContent || "";
+    const description = (descriptionEl == null ? void 0 : descriptionEl.textContent) || "";
     const pubDate = new Date(pubDateEl.textContent);
     const artworkUrl = (itunesImageEl == null ? void 0 : itunesImageEl.getAttribute("href")) || ((_a = this.feed) == null ? void 0 : _a.artworkUrl);
     return {
@@ -4111,69 +4111,74 @@ function getUrlExtension(url) {
 }
 
 // src/TemplateEngine.ts
-function TemplateEngine(template, tags) {
-  return template.replace(/\{\{(.*?)(:\s*?.+?)?\}\}/g, (match, tagId, params) => {
-    const tagValue = tags[tagId.toLowerCase()];
-    if (tagValue === null || tagValue === void 0) {
-      const fuse = new Fuse(Object.keys(tags), {
-        shouldSort: true,
-        findAllMatches: false,
-        threshold: 0.4,
-        isCaseSensitive: false
-      });
-      const similarTag = fuse.search(tagId);
-      new import_obsidian9.Notice(`Tag ${tagId} is invalid.${similarTag.length > 0 ? ` Did you mean ${similarTag[0].item}?` : ""}`);
-      return match;
-    }
-    if (typeof tagValue === "function") {
-      if (params) {
-        const splitParams = params.slice(1).split(",");
-        const args = Array.isArray(splitParams) ? splitParams : [params];
-        return tagValue(...args);
+function useTemplateEngine() {
+  const tags = {};
+  function addTag(tag, value) {
+    tags[tag] = value;
+  }
+  function replacer(template) {
+    return template.replace(/\{\{(.*?)(:\s*?.+?)?\}\}/g, (match, tagId, params) => {
+      const tagValue = tags[tagId.toLowerCase()];
+      if (tagValue === null || tagValue === void 0) {
+        const fuse = new Fuse(Object.keys(tags), {
+          shouldSort: true,
+          findAllMatches: false,
+          threshold: 0.4,
+          isCaseSensitive: false
+        });
+        const similarTag = fuse.search(tagId);
+        new import_obsidian9.Notice(`Tag ${tagId} is invalid.${similarTag.length > 0 ? ` Did you mean ${similarTag[0].item}?` : ""}`);
+        return match;
       }
-      return tagValue();
-    }
-    return tagValue;
-  });
+      if (typeof tagValue === "function") {
+        if (params) {
+          const splitParams = params.slice(1).split(",");
+          const args = Array.isArray(splitParams) ? splitParams : [params];
+          return tagValue(...args);
+        }
+        return tagValue();
+      }
+      return tagValue;
+    });
+  }
+  return [replacer, addTag];
 }
 function NoteTemplateEngine(template, episode) {
   var _a;
-  return TemplateEngine(template, {
-    "title": episode.title,
-    "description": (prependToLines) => {
-      if (prependToLines) {
-        return (0, import_obsidian9.htmlToMarkdown)(episode.description).split("\n").map(prepend(prependToLines)).join("\n");
-      }
-      return (0, import_obsidian9.htmlToMarkdown)(episode.description);
-    },
-    "url": episode.url,
-    "date": (format2) => episode.episodeDate ? window.moment(episode.episodeDate).format(format2 != null ? format2 : "YYYY-MM-DD") : "",
-    "podcast": episode.podcastName,
-    "artwork": (_a = episode.artworkUrl) != null ? _a : ""
+  const [replacer, addTag] = useTemplateEngine();
+  addTag("title", episode.title);
+  addTag("description", (prependToLines) => {
+    if (prependToLines) {
+      return (0, import_obsidian9.htmlToMarkdown)(episode.description).split("\n").map((str) => `${prependToLines}${str}`).join("\n");
+    }
+    return (0, import_obsidian9.htmlToMarkdown)(episode.description);
   });
-}
-function prepend(prepend2) {
-  return (str) => `${prepend2}${str}`;
+  addTag("safetitle", replaceIllegalFileNameCharactersInString(episode.title));
+  addTag("url", episode.url);
+  addTag("date", (format2) => episode.episodeDate ? window.moment(episode.episodeDate).format(format2 != null ? format2 : "YYYY-MM-DD") : "");
+  addTag("podcast", episode.podcastName);
+  addTag("artwork", (_a = episode.artworkUrl) != null ? _a : "");
+  return replacer(template);
 }
 function TimestampTemplateEngine(template) {
-  return TemplateEngine(template, {
-    "time": (format2) => get_store_value(plugin).api.getPodcastTimeFormatted(format2 != null ? format2 : "HH:mm:ss"),
-    "linktime": (format2) => get_store_value(plugin).api.getPodcastTimeFormatted(format2 != null ? format2 : "HH:mm:ss", true)
-  });
+  const [replacer, addTag] = useTemplateEngine();
+  addTag("time", (format2) => get_store_value(plugin).api.getPodcastTimeFormatted(format2 != null ? format2 : "HH:mm:ss"));
+  addTag("linktime", (format2) => get_store_value(plugin).api.getPodcastTimeFormatted(format2 != null ? format2 : "HH:mm:ss", true));
+  return replacer(template);
 }
 function FilePathTemplateEngine(template, episode) {
-  return TemplateEngine(template, {
-    "title": replaceIllegalFileNameCharactersInString(episode.title),
-    "podcast": replaceIllegalFileNameCharactersInString(episode.podcastName)
-  });
+  const [replacer, addTag] = useTemplateEngine();
+  addTag("title", replaceIllegalFileNameCharactersInString(episode.title));
+  addTag("podcast", replaceIllegalFileNameCharactersInString(episode.podcastName));
+  return replacer(template);
 }
 function DownloadPathTemplateEngine(template, episode) {
   const templateExtension = getUrlExtension(template);
   const templateWithoutExtension = templateExtension ? template.replace(templateExtension, "") : template;
-  return TemplateEngine(templateWithoutExtension, {
-    "title": replaceIllegalFileNameCharactersInString(episode.title),
-    "podcast": replaceIllegalFileNameCharactersInString(episode.podcastName)
-  });
+  const [replacer, addTag] = useTemplateEngine();
+  addTag("title", replaceIllegalFileNameCharactersInString(episode.title));
+  addTag("podcast", replaceIllegalFileNameCharactersInString(episode.podcastName));
+  return replacer(templateWithoutExtension);
 }
 function replaceIllegalFileNameCharactersInString(string) {
   return string.replace(/[\\,#%&{}/*<>$'":@\u2023|?]*/g, "").replace(/\n/, " ").replace("  ", " ");
@@ -6282,30 +6287,22 @@ var import_obsidian14 = require("obsidian");
 
 // src/createPodcastNote.ts
 var import_obsidian12 = require("obsidian");
+
+// src/utility/addExtension.ts
+function addExtension(path, extension) {
+  const ext = extension.startsWith(".") ? extension : `.${extension}`;
+  return path.endsWith(ext) ? path : `${path}${ext}`;
+}
+
+// src/createPodcastNote.ts
 function createPodcastNote(episode) {
   return __async(this, null, function* () {
     const pluginInstance = get_store_value(plugin);
     const filePath = FilePathTemplateEngine(pluginInstance.settings.note.path, episode);
-    const filePathDotMd = filePath.endsWith(".md") ? filePath : `${filePath}.md`;
+    const filePathDotMd = addExtension(filePath, "md");
     const content = NoteTemplateEngine(pluginInstance.settings.note.template, episode);
-    const createOrGetFile = (path, content2) => __async(this, null, function* () {
-      const file = getPodcastNote(episode);
-      if (file) {
-        new import_obsidian12.Notice(`Note for "${pluginInstance.api.podcast.title}" already exists`);
-        return file;
-      }
-      const foldersInPath = path.split("/").slice(0, -1);
-      for (let i = 0; i < foldersInPath.length; i++) {
-        const folderPath = foldersInPath.slice(0, i + 1).join("/");
-        const folder = app.vault.getAbstractFileByPath(folderPath);
-        if (!folder) {
-          yield app.vault.createFolder(folderPath);
-        }
-      }
-      return yield app.vault.create(path, content2);
-    });
     try {
-      const file = yield createOrGetFile(filePathDotMd, content);
+      const file = yield createFileIfNotExists(filePathDotMd, content, episode);
       app.workspace.getLeaf().openFile(file);
     } catch (error) {
       console.error(error);
@@ -6316,7 +6313,7 @@ function createPodcastNote(episode) {
 function getPodcastNote(episode) {
   const pluginInstance = get_store_value(plugin);
   const filePath = FilePathTemplateEngine(pluginInstance.settings.note.path, episode);
-  const filePathDotMd = filePath.endsWith(".md") ? filePath : `${filePath}.md`;
+  const filePathDotMd = addExtension(filePath, "md");
   const file = app.vault.getAbstractFileByPath(filePathDotMd);
   if (!file || !(file instanceof import_obsidian12.TFile)) {
     return null;
@@ -6330,6 +6327,24 @@ function openPodcastNote(epiosode) {
     return;
   }
   app.workspace.getLeaf().openFile(file);
+}
+function createFileIfNotExists(path, content, episode, createFolder = true) {
+  return __async(this, null, function* () {
+    const file = getPodcastNote(episode);
+    if (file) {
+      new import_obsidian12.Notice(`Note for "${episode.title}" already exists`);
+      return file;
+    }
+    const foldersInPath = path.split("/").slice(0, -1);
+    for (let i = 0; i < foldersInPath.length; i++) {
+      const folderPath = foldersInPath.slice(0, i + 1).join("/");
+      const folder = app.vault.getAbstractFileByPath(folderPath);
+      if (!folder && createFolder) {
+        yield app.vault.createFolder(folderPath);
+      }
+    }
+    return yield app.vault.create(path, content);
+  });
 }
 
 // src/downloadEpisode.ts
